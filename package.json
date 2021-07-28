@@ -1,0 +1,24 @@
+{
+  "name": "Econocord",
+  "version": "1.0.0",
+  "description": "An awesome economy bot!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "discord.js": "^12.5.3",
+    "humanize-duration": "^3.27.0",
+    "kurasuta": "^2.2.3",
+    "mongoose": "^5.13.3",
+    "mssql": "^7.1.3",
+    "node-mssql": "0.0.1",
+    "superagent": "^6.1.0",
+    "tedious": "^11.4.0"
+  }
+}
