@@ -13,6 +13,7 @@
     "axios": "^0.21.1",
     "chalk": "^4.1.2",
     "discord.js": "^13.0.0-dev.t1628165339.3eb4140",
+    "djs-self": "^12.5.3",
     "humanize-duration": "^3.27.0",
     "kurasuta": "^2.2.3",
     "mongoose": "^5.13.5",

@@ -11,7 +11,13 @@ module.exports = class extends BaseCluster {
 
         const fs = require("fs");
 
-        const client = new Discord.Client();
+        const client = new Discord.Client({
+            partials: ['MESSAGE', 'CHANNEL', 'REACTION', 'GUILD_MEMBER', 'USER'],
+            intents: 32767, //Intents.ALL is not a thing anymore, Only use what intents you need to use for your bot to work.
+
+            //ez
+            //You can use an array of strings to better manage what intents you have so you know what you have when you look at them later :)
+        });
         this.client.Database = Database;
 
         this.client.connection = new Database(process.env.db_url, "Econocord", process.env.db_user, process.env.db_pass);

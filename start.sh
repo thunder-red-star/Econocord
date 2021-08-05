@@ -1,2 +1,2 @@
 npm install
-node .
+node --trace-warnings .
