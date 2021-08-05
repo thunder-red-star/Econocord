@@ -16,9 +16,6 @@ module.exports = class extends BaseCluster {
 
         this.client.connection = new Database(process.env.db_url, "Econocord", process.env.db_user, process.env.db_pass);
 
-        require('discord-buttons')(client);
-        this.client.buttons = require("discord-buttons");
-
         this.client.modules = [
             "config",
             "economy",

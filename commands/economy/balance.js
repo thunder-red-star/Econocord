@@ -50,7 +50,7 @@ exports.run = async (client, message, args, tools) => {
                 .addField("Coins", coins, true)
                 .addField("Gems", gems, true)
                 .setTimestamp()
-            return message.channel.send(balEmbed)
+            return message.channel.send({embeds: [balEmbed]})
         } catch (err) {
             return message.channel.send("An error occurred, please try again later.\n" + "```" + err + "```")
             console.log(err)
