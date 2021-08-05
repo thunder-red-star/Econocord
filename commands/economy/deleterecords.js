@@ -16,7 +16,7 @@ exports.run = async (client, message, args, tools, buttons) => {
                 .setTitle("Accounts Deleted!")
                 .setDescription("Your account and all of its data has been successfully deleted.")
                 .setTimestamp()
-            return message.channel.send(startedEmbed)
+            return message.channel.send({embeds: [startedEmbed]})
         } catch (err) {
             return message.channel.send("An error occurred, please try again later.\n" + "```" + err + "```")
             console.log(err)

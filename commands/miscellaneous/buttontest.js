@@ -3,7 +3,7 @@ const Discord = require("discord.js"),
     fs = require("fs")
 
 exports.run = async (client, message, args, tools) => {
-    let button = new client.buttons.MessageButton()
+    let button = new Discord.MessageButton()
     .setLabel("This is a button!")
     .setID("myid")
     .setStyle("blurple");

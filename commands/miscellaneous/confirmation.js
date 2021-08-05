@@ -3,19 +3,19 @@ const Discord = require("discord.js"),
     fs = require("fs")
 
 exports.run = async (client, message, args, tools) => {
-    let yesButton = new client.buttons.MessageButton()
+    let yesButton = new Discord.MessageButton()
         .setLabel("Yes")
         .setID("confirmYes")
         .setEmoji("811296394324869150", true)
         .setStyle("green");
 
-    let noButton = new client.buttons.MessageButton()
+    let noButton = new Discord.MessageButton()
         .setLabel("No")
         .setID("confirmNo")
         .setEmoji("811294703626223687", true)
         .setStyle("red");
 
-    let row = new client.buttons.MessageActionRow()
+    let row = new Discord.MessageActionRow()
         .addComponents(yesButton, noButton);
 
     let msg = await message.channel.send("Testing confirmation.", row)

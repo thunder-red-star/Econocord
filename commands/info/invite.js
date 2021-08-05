@@ -3,7 +3,7 @@ const Discord = require("discord.js"),
     fs = require("fs")
 
 exports.run = async (client, message, args, tools) => {
-    let button = new client.buttons.MessageButton()
+    let button = new Discord.MessageButton()
     .setLabel("Invite me here.")
     .setURL("https://discord.com/oauth2/authorize?client_id=868170219569426472&permissions=4228377809&scope=bot")
     .setStyle("url");

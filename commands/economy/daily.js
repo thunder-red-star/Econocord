@@ -26,7 +26,7 @@ exports.run = async (client, message, args, tools, buttons) => {
                     .setTitle("Daily")
                     .setDescription("You've already claimed your daily bonuses in the last 24 hours. Try again in " + humanizeDuration(86400000 - (message.createdTimestamp - lastclaim)) + ".")
                     .setTimestamp()
-                return message.channel.send(failEmbed)
+                return message.channel.send({embeds: [failEmbed]})
             }
             else {
                 await client.Database.add_coins(client.connection, message.author.id, 2500)
@@ -40,7 +40,7 @@ exports.run = async (client, message, args, tools, buttons) => {
                     .setTitle("Daily")
                     .setDescription("Congratulations, you've gotten 2500 coins and 25 gems from today's daily claim. Come back in 24 hours!")
                     .setTimestamp()
-                return message.channel.send(successEmbed)
+                return message.channel.send({embeds: [successEmbed]})
             }
         } catch (err) {
             console.log(err)

@@ -3,25 +3,25 @@ const Discord = require("discord.js"),
     fs = require("fs")
 
 exports.run = async (client, message, args, tools) => {
-    let option = new client.buttons.MessageMenuOption()
+    let option = new Discord.MessageMenuOption()
         .setLabel('Potato')
         .setEmoji('🥔')
         .setValue('menuid')
         .setDescription('Baked Potato')
 
-    let option1 = new client.buttons.MessageMenuOption()
+    let option1 = new Discord.MessageMenuOption()
         .setLabel('Potato')
         .setEmoji('🍟')
         .setValue('menuid1')
         .setDescription('Fried Potato (french fries)')
 
-    let option2 = new client.buttons.MessageMenuOption()
+    let option2 = new Discord.MessageMenuOption()
         .setLabel('Potato')
         .setEmoji('🍠')
         .setValue('menuid2')
         .setDescription('The Pressed Potato')
 
-    let select = new client.buttons.MessageMenu()
+    let select = new Discord.MessageMenu()
         .setID('customid')
         .setPlaceholder('Favorite food?')
         .setMaxValues(3)

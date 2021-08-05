@@ -15,7 +15,7 @@ exports.run = async (client, message, args, tools, buttons) => {
             .setTitle("Accounts Created!")
             .setDescription("Your account has been successfully created. Congratulations and thank you for using this bot!")
             .setTimestamp()
-            return message.channel.send(startedEmbed)
+            return message.channel.send({embeds: [startedEmbed]})
         } catch (err) {
             return message.channel.send("An error occurred, please try again later.\n" + "```" + err + "```")
             console.log(err)
