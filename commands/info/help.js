@@ -18,7 +18,8 @@ function permlevel(input) {
 }
 
 exports.run = async (client, message, args, tools) => {
-    return message.channel.send("Coming soon!")
+    let argument = args[0]
+    
 };
 
 exports.conf = {
